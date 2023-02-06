@@ -13,11 +13,12 @@ body {
 /* navigation*/
 header {
   display: flex;
-  border-bottom: 1px solid #ececec;
+  border: 1px solid #ececec;
   height: 80px;
   align-items: center;
   width: 1600px;
-  justify-content: space-between;
+  justify-content: space-around;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 4px;
 }
 .logo > a {
   text-decoration: none;
@@ -36,31 +37,20 @@ header {
   text-decoration: none;
   color: var(--main-color);
   font-weight: 500;
-  padding-left: 93px;
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  width: 254px;
 }
 .navbar {
   display: flex;
-  width: 254px;
-  padding-left: 91px;
-  padding-right: 393px;
+  width: 261px;
+  justify-content: space-between;
+  gap: 45px;
 }
-
 .contact-email-header {
   display: inline-block;
-  padding-left: 373px;
   width: 135px;
   padding-right: 50px;
 }
 .contact-phone-header {
   display: inline-block;
-  padding-right: 227px;
-  width: 110px;
 }
 .navbar > li > a:hover,
 .navbar > li > a:focus {
@@ -74,6 +64,8 @@ header {
 }
 
 .contact-phone-header > a:hover,
+.contact-phone-header > a:focus,
+.contact-email-header > a:hover,
 .contact-email-header > a:focus {
   color: var(--brand-color);
 }
@@ -168,6 +160,8 @@ h1 {
 .main-page-third-container > li > figure {
   margin: 0px;
   background-color: #fff;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 4px;
 }
 .main-page-third-container-section {
   background: #f5f4fa;
@@ -179,20 +173,33 @@ h1 {
 }
 .main-page-third-container > li > figure > img {
   padding-bottom: 30px;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
 }
 .main-page-third-container-photo-description {
   color: var(--secondary-color);
   line-height: 1.1;
   padding-bottom: 30px;
 }
+
+/*main*/
+
 /*portfolio*/
+
 .main-buttons {
   list-style: none;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  padding-inline-start: 0px;
+  margin: 94px 0px 50px 0px;
 }
 .main-button {
   color: var(--main-color);
   background-color: #f5f4fa;
   line-height: 1.6;
+  border-radius: 4px;
+  border: none;
 }
 .main-buttons > li > button {
   font-weight: 500;
@@ -208,8 +215,14 @@ h1 {
   color: #fff;
 }
 .portfolio-examples {
-  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  flex-basis: calc((100%-60px) / 3);
+  margin: 0px;
 }
+
 .image-description-title {
   font-weight: 700;
   font-size: 18px;
@@ -221,8 +234,6 @@ h1 {
 }
 
 /*portfolio*/
-
-/*main*/
 
 /*footer*/
 footer {
