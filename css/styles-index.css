@@ -9,7 +9,9 @@ body {
   list-style: none;
   width: 1600px;
 }
-
+a {
+  text-decoration: none;
+}
 /* navigation*/
 header {
   display: flex;
@@ -20,7 +22,7 @@ header {
   justify-content: space-around;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 4px;
 }
-.logo > a {
+.logo-top > a {
   text-decoration: none;
   font-family: 'Raleway';
   color: #000;
@@ -236,6 +238,15 @@ h1 {
 /*portfolio*/
 
 /*footer*/
+.logo-bottom > a {
+  text-decoration: none;
+  font-family: 'Raleway';
+  color: #fff;
+  font-size: 26px;
+  line-height: 1.1;
+  padding-left: 215px;
+}
+
 footer {
   background-color: #2f303a;
 }
