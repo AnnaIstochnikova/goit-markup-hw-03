@@ -245,10 +245,12 @@ h1 {
   font-size: 26px;
   line-height: 1.1;
   padding-left: 215px;
+  padding-top: 60px;
 }
 
 footer {
   background-color: #2f303a;
+  height: 252px;
 }
 .address > p > {
   text-decoration: none;
