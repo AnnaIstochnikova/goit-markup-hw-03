@@ -14,13 +14,16 @@ a {
 }
 /* navigation*/
 header {
-  display: flex;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 4px;
   border: 1px solid #ececec;
+}
+.container-header {
+  display: flex;
   height: 80px;
   align-items: center;
-  width: 1600px;
-  justify-content: space-around;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 4px;
+  width: 1200px;
+  justify-content: space-between;
+  margin: 0 auto;
 }
 .logo-top > a {
   text-decoration: none;
@@ -28,7 +31,6 @@ header {
   color: #000;
   font-size: 26px;
   line-height: 1.1;
-  padding-left: 215px;
 }
 .logo-first-part {
   color: var(--brand-color);
@@ -42,14 +44,14 @@ header {
 }
 .navbar {
   display: flex;
-  width: 261px;
   justify-content: space-between;
   gap: 45px;
+  margin-right: 373px;
 }
 .contact-email-header {
   display: inline-block;
   width: 135px;
-  padding-right: 50px;
+  margin-right: 50px;
 }
 .contact-phone-header {
   display: inline-block;
@@ -106,9 +108,11 @@ h1 {
   cursor: pointer;
 }
 .main-page-first-container {
-  margin: 94px 215px 0px 215px;
+  margin: 94px auto;
+  width: 1200px;
+}
+.main-page-first-container-list {
   display: flex;
-  width: 1170px;
   flex-basis: calc((100%-90px) / 4);
   gap: 30px;
   justify-content: space-between;
@@ -119,15 +123,15 @@ h1 {
   text-transform: uppercase;
   line-height: 1.1;
 }
-.main-page-first-container > li {
+.main-page-first-container-list > li {
   list-style: none;
 }
-.main-page-first-container > li > p {
+.main-page-first-container-list > li > p {
   color: var(--secondary-color);
   line-height: 1.7;
   margin: 0;
 }
-.main-page-first-container {
+.main-page-first-container-list {
   padding-inline-start: 0px;
 }
 .main-page-container-title {
@@ -139,33 +143,44 @@ h1 {
   padding: 94px 0 50px 0;
 }
 .main-page-second-container {
-  display: flex;
-  width: 1170px;
-  padding: 50px 215px 94px 215px;
-  list-style: none;
-  gap: 30px;
-  margin: 0px;
+  width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 94px;
 }
+.main-page-second-container-list {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 0;
+}
+
 .main-page-third-container > li {
   list-style: none;
   text-align: center;
 }
 .main-page-third-container {
   display: flex;
-  margin: 0px;
+  margin: 0 auto;
   justify-content: space-between;
   gap: 30px;
   flex-basis: calc((100%-90px) / 4);
-  padding: 0px 215px 94px 215px;
-  background: #f5f4fa;
+
+  padding: 0;
+  padding-bottom: 94px;
 }
 .main-page-third-container > li > figure {
   margin: 0px;
   background-color: #fff;
   border-radius: 4px;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 4px;
+  height: 368px;
 }
 .main-page-third-container-section {
+  margin: 0 auto;
+  width: 1170px;
+}
+.main-page-third-container-section-box {
   background: #f5f4fa;
 }
 
@@ -174,14 +189,15 @@ h1 {
   line-height: 1.1;
 }
 .main-page-third-container > li > figure > img {
-  padding-bottom: 30px;
   border-top-right-radius: 4px;
   border-top-left-radius: 4px;
 }
 .main-page-third-container-photo-description {
   color: var(--secondary-color);
   line-height: 1.1;
-  padding-bottom: 30px;
+}
+.main-page-third-container > li > figure > figcaption {
+  padding: 30px 70px;
 }
 
 /*main*/
@@ -194,7 +210,7 @@ h1 {
   gap: 8px;
   justify-content: center;
   padding-inline-start: 0px;
-  margin: 94px 0px 50px 0px;
+  margin: 94px 0px 34px 0px;
 }
 .main-button {
   color: var(--main-color);
@@ -207,6 +223,7 @@ h1 {
   font-weight: 500;
   font-weight: bold;
   text-decoration: none;
+  padding: 6px 22px;
 }
 
 .main-button:hover,
@@ -216,16 +233,24 @@ h1 {
   cursor: pointer;
   color: #fff;
 }
+.portfolio-examples-container {
+  width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 94px;
+}
 .portfolio-examples {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
   flex-basis: calc((100%-60px) / 3);
-  margin: 0px;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
-
+.portfolio-examples > li > figure {
+  margin: 0;
+}
 .image-description-title {
   font-weight: 700;
   font-size: 18px;
@@ -245,13 +270,15 @@ h1 {
   color: #fff;
   font-size: 26px;
   line-height: 1.1;
-  padding-left: 215px;
-  padding-top: 60px;
 }
 
 footer {
   background-color: #2f303a;
-  height: 252px;
+}
+.container-footer {
+  padding-top: 60px;
+  padding-left: 215px;
+  padding-bottom: 60px;
 }
 .address > p > {
   text-decoration: none;
@@ -261,7 +288,6 @@ footer {
   font-style: normal;
   font-size: 14px;
   color: #fff;
-  padding-left: 215px;
 }
 
 .contact-email > a {
@@ -269,14 +295,12 @@ footer {
   font-size: 14px;
   color: #ffffff60;
   text-decoration: none;
-  padding-left: 215px;
 }
 .contact-phone > a {
   text-decoration: none;
   font-style: normal;
   font-size: 14px;
   color: #ffffff60;
-  padding-left: 215px;
 }
 .contact-email > a:hover,
 .contact-email > a:focus,
